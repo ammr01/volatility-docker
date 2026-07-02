@@ -1,0 +1,12 @@
+mkdir workspace
+
+# install Houseplant CTF 2020 – Imagery memory from this website, download the file in 
+# workspace directory
+xdg-open https://memoryforensic.com/memory-dumps-collection-volume-1/
+
+sudo apt install 7zip
+7zip e imagery.7z
+
+
+docker image pull ammr01/vol:latest
+docker container run -it -v .:/workspace ammr01/vol:latest bash 
